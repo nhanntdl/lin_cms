@@ -1,0 +1,10 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Create tables'
+    - create_vektar_ourteam_employee.php
+    - create_vektar_ourteam_team.php
+    - create_vektar_ourteam_theme.php
+    - create_vektar_ourteam_seeder.php
+1.0.3:
+    - 'Added image previews in lists'

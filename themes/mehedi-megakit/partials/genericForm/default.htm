@@ -1,0 +1,33 @@
+;;
+description = "Contact Form Component"
+==
+{##}
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+
+    {{ form_token() }}
+
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-success contact__msg" style="display: none" role="alert" id="{{ __SELF__ }}_forms_flash"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input id="megakitname" name="name" type="text" class="form-control" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input id="megakitemail" name="email" type="email" class="form-control" placeholder="Email Address" required>
+    </div>
+
+    <div class="form-group-2 mb-4">
+        <textarea id="megakitmessage" name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+
+    <div class="mt40">
+        {% partial 'genericForm/recaptcha' %}
+    </div>
+
+    <div>
+        <button id="simpleContactSubmitButton" class="btn btn-main" name="submit" type="submit">Send Message</button>
+    </div>
+</form>

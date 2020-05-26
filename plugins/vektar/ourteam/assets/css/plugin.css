@@ -1,0 +1,104 @@
+#ourteam .ourteam-col {
+  padding: 0;
+}
+
+#ourteam .ourteam-col:hover .ourteam-info {
+  opacity: 1;
+}
+
+#ourteam .ourteam-col:hover .overlay {
+  opacity: 0.6;
+}
+
+#ourteam .ourteam-col:hover .ourteam-info h3 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#ourteam .ourteam-col:hover .ourteam-info h5 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#ourteam .ourteam-col:hover .ourteam-info .ourteam-social .social-links {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#ourteam .ourteam-col .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 350px;
+  margin: auto;
+  opacity: 0;
+  transition: all 1s ease;
+  z-index: 0;
+}
+
+#ourteam .ourteam-col .ourteam-info {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  max-width: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  z-index: 1;
+  transition: all 0.8s ease;
+  overflow: hidden;
+}
+
+#ourteam .ourteam-col .ourteam-info h3 {
+  transform: translateY(-300px);
+  transition: all 0.7s ease;
+  opacity: 0;
+}
+
+#ourteam .ourteam-col .ourteam-info h5 {
+  transform: translateY(300px);
+  transition: all 0.8s ease;
+  opacity: 0;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social {
+  display: flex;
+  flex-direction: row;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social .social-links {
+  font-size: 1.5em;
+  transition: transform 0.8s ease;
+  transform: translateY(300px);
+  color: #fff;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social .social-links:hover {
+  filter: brightness(80%);
+  transition: none;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social .twitter {
+  transition-delay: 100ms;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social .facebook {
+  transition-delay: 140ms;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social .instagram {
+  transition-delay: 180ms;
+}
+
+#ourteam .ourteam-col .ourteam-info .ourteam-social .linkedin {
+  transition-delay: 220ms;
+}

@@ -1,0 +1,15 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+employee:
+    label: a Team Member
+    view:
+        list: $/vektar/ourteam/models/employee/columns.yaml
+        form: $/vektar/ourteam/models/employee/fields.yaml
+        showCheckboxes: true
+        toolbarButtons: create|delete
+    manage:
+        form: $/vektar/ourteam/models/employee/fields.yaml
+        recordsPerPage: 20
+    emptyMessage: No records found

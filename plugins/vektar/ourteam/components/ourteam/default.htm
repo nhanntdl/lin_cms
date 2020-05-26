@@ -1,0 +1,27 @@
+{% set employees = __SELF__.ourteam.employee %}
+<div class="container p-0 m-0">
+	{% for employee in employees %}
+	<!-- MEMBER -->
+	<div style="display: flex; background-color: #e9e9e9;" class="item-box">
+		<div
+			class="team-members-avt"
+			style="background-image: url('{{employee.employeephoto.thumb(1000, auto)}}');"
+		></div>
+		<div
+			class="content-member p-3"
+			style="line-height: 1; position: relative; width: 50%; background-color: var(--green);"
+		>
+			<span class="member-name">{{ employee.name }}</span><br />
+			<span class="member-description">{{ employee.job_role }}</span>
+			<div style="position: absolute; bottom: 1rem; right: 1rem;" class="member-btn">
+				<img
+					src="./storage/app/media/our_team/teamBackground.png"
+					alt=""
+					class="btn-member-detail"
+				/>
+			</div>
+		</div>
+	</div>
+	<!-- /MEMBER -->
+	{% endfor %}
+</div>

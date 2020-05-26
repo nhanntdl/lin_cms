@@ -1,0 +1,24 @@
+.donate-img {
+    width: 90%;
+}
+.green-text {
+    color: var(--green);
+    transition: .1s;
+}
+.green-text:hover {
+    color: var(--green);
+    text-decoration: none !important;
+}
+.donate {
+    font-size: x-large;
+    padding-top: 9rem;
+}
+@media only screen and (max-width: 768px) {
+    .donate {
+        font-size: x-large;
+        padding-top: 0;
+    }
+}
+.table td, .table th{
+    border: none !important;
+}

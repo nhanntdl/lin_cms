@@ -1,0 +1,19 @@
+tabs:
+  fields:
+
+    ####################################################
+    # Tab: 1.0 General Settings
+    ####################################################
+    
+    theme_info_section:
+      tab: "General"
+      label: "Info"
+      type: section
+      comment: "General Informations"
+      cssClass: "p-a m-y control-scrollpanel"
+
+    theme_site_name:
+      tab: "General"
+      label: "Website Name"
+      type: text
+      default: "MegaKit"

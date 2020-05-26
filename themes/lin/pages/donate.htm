@@ -1,0 +1,200 @@
+title = "Donate"
+url = "/donate"
+layout = "default"
+is_hidden = 0
+==
+<header style="background-image: url('{{ '/header/donate_header.png'|media }}'); background-size: cover; background-repeat: no-repeat;background-position: center center;">
+    <div id="page-banner" class="banner" style="height: 70vh;"
+    >
+        <div
+            class="container d-flex justify-content-center align-items-center flex-column"
+            style="height: 100%; position: relative;"
+        >
+            <section style="
+            position: absolute;
+            left: 0;
+            bottom: 3rem;
+            padding-right: 15px;
+            padding-left: 15px;
+            color: var(--white);
+
+          "
+                     id="content-banner"
+            >
+                <h1 class="title" id="page-title">Donate</h1>
+                <div class="d-flex" id="banner-donate-btn">
+                </div>
+            </section>
+        </div>
+    </div>
+</header>
+<link
+    rel="stylesheet"
+    href="{{ 'assets/css/donate.css'|theme }}"
+/>
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div class="d-flex donate">
+                {{"As a not-for-profit organization, LIN relies on donations to support our
+                grant making, volunteer matching, capacity building and research
+                activities. We do not charge local NPOs for the services provided. To
+                help us continue to provide these services, please consider making a
+                contribution to LIN."|_}}
+            </div>
+            <div class="pt-5">
+                <div class="title" style="color: var(--green);">{{'Cash Contribution'|_}}</div>
+                <div class="content">
+                    {{"You are welcome to visit LIN's office, during normal working hours, to
+                    make a cash contribution. If you notify us before arriving, we will
+                    prepare your receipt of contribution in advance."|_}}
+                </div>
+            </div>
+            <div class="pt-5">
+                <div class="title" style="color: var(--green);">
+                    {{"Bank or Wire Transfer"|_}}
+                </div>
+                <div class="content">
+                    {{"LIN has both VND and $US bank accounts with Vietcombank. (Please send
+                    us an email at:donor@LINvn.org, before or after you made a bank
+                    transfer and we will be happy to confirm receipt"|_}}
+                </div>
+            </div>
+            <div class="mt-4 p-3" style="background-color: #ccf0e3;">
+                <table class="table table-borderless">
+                    <thead>
+                    <tr>
+                        <!-- <th scope="col"></th>
+                      <th scope="col"></th> -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td
+                            style="font-weight: bold; max-width: 150px; min-width: 150px;"
+                        >
+                            {{"Account name"|_}}
+                        </td>
+                        <td>
+                            {{"LIN Center for Community Development Trung tâm Hỗ Trợ Phát Triển
+                            Cộng Đồng LIN"|_}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="font-weight: bold; max-width: 150px; min-width: 150px;"
+                        >
+                            {{"VND Account #"|_}}
+                        </td>
+                        <td>007 100 5091 855</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="font-weight: bold; max-width: 150px; min-width: 150px;"
+                        >
+                            {{"USD Account #"|_}}
+                        </td>
+                        <td>{{"Please contact LIN for account information"|_}}</td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="font-weight: bold; max-width: 150px; min-width: 150px;"
+                        >
+                            {{"Name of bank"|_}}
+                        </td>
+                        <td>
+                            {"Bank for Foreign Trade of Vietnam, HCMC Branch (Vietcombank HCM)"|_}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="font-weight: bold; max-width: 150px; min-width: 150px;"
+                        >
+                            {{"Bank address"|_}}
+                        </td>
+                        <td>
+                            {{"05 Me Linh Square - Ben Nghe Ward - District 1 - HCMC - Viet Nam"|_}}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 p-0 text-center">
+            <img src="{{ '/donate/donateBackground.png'|media }}" alt="" width="90%" />
+            <div class="d-flex flex-column align-items-end text-left pt-5">
+                <div class="col-12 col-lg-11">
+                    <div>
+                        <div class="title" style="color: var(--green);">
+                            {{"Tax Deductable Contribution (for US and UK citizens)"|_}}
+                        </div>
+                        <div class="content">
+                            {{"LIN has partnerships with 2 fiscal sponsors Give2Asia and Global
+                            Giving which enable residents of the U.S. and U.K. to make a tax
+                            deductible contribution to LIN by wire transfer, credit card
+                            and/or check."|_}}
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div class="col-12 col-lg-4 text-center">
+                            <img
+                                src="{{ '/donate/give2Asia.png'|media }}"
+                                alt=""
+                                style="width: 100%;"
+                            />
+                        </div>
+                        <div class="mt-3">
+              <span class="content">
+                <span class="green-text title">
+                  {{"Give2Asia:"|_}}
+                </span>
+                {{"U.S. donors can make tax deductible donations to Give2Asia in
+                support of LIN via"|_}}
+                <a class="green-text" style="text-decoration: underline;" href="https://www.give2asia.org/lin">
+                  www.give2asia.org/lin </a
+                >{{"by making donations of cash, securities or other assets to"|_}}
+                <a class="green-text" href="https://www.give2asia.org/lin">
+                  {{"Give2Asia"|_}}
+                </a>
+                {{"that indicate support for the LIN Center for Community
+                Development."|_}}
+              </span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row mt-3">
+                        <div class="col-12 col-lg-4 text-center">
+                            <img
+                                src="{{ '/donate/globalGiving.png'|media }}"
+                                alt=""
+                                style="width: 100%;"
+                            />
+                        </div>
+                        <div class="">
+              <span class="content">
+                <span class="green-text title">
+                  {{"Global Giving:"|_}}
+                </span>
+                {{"U.S. and U.K. donors can make tax deductible donations in
+                support of LIN via"|_}}
+                <a class="green-text" href="https://www.give2asia.org/lin">
+                  GlobalGiving.org
+                </a>
+              </span>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="title" style="color: var(--green);">
+                            {{"Donate in-kind"|_}}
+                        </div>
+                        <div class="content">
+                            {{"LIN Community Center always has a need for furniture and
+                            equipment. To view the list please click on the Rooms below. If
+                            you see something you wish to donate, contact us at"|_}}
+                            <span class="green-text">info@linvn.org</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

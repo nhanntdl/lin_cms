@@ -1,0 +1,10 @@
+name: Teams
+form: $/vektar/ourteam/models/team/fields.yaml
+modelClass: Vektar\OurTeam\Models\Team
+defaultRedirect: vektar/ourteam/teams
+create:
+    redirect: 'vektar/ourteam/teams/update/:id'
+    redirectClose: vektar/ourteam/teams
+update:
+    redirect: vektar/ourteam/teams
+    redirectClose: vektar/ourteam/teams

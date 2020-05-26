@@ -1,0 +1,135 @@
+title = "Single New Post"
+url = "/:slug"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "single-news-post"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "news"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "single-news-post"
+
+[campaignrUpcoming]
+sorting = "checked"
+evtNumber = 100
+eventPage = "single-news-post"
+eventSlug = ":slug"
+==
+<?php
+function onStart()
+{
+    $this->param('has_summary') == false;
+}
+?>
+==
+<!-- Banner -->
+<header
+    style="background-image: url('{{ '/event/Layer608.png'|media }}');"
+    id="page-banner"
+>
+    <div class="banner" style="height: 100vh;">
+        <div
+            class="container d-flex justify-content-center align-items-center flex-column"
+            style="height: 100%; position: relative;"
+        >
+            <section
+                style="
+                    position: absolute;
+                    left: 0;
+                    bottom: 3rem;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    color: var(--white);
+                "
+                id="content-banner"
+            >
+                <h1 class="title" id="page-title">
+                    {{ post.title }}
+                </h1>
+                <p>{{ post.published_at|date('M d, Y') }}</p>
+                <div class="d-flex" id="banner-donate-btn"></div>
+            </section>
+        </div>
+    </div>
+</header>
+<!-- /Banner -->
+<link
+    rel="stylesheet"
+    href="{{ 'assets/css/single-news-post.css'|theme }}"
+/>
+<div class="container p-0 pt-5 pb-5" id="post-content">
+    <div class="col-12 col-lg-7">
+        {% component 'blogPost' %}
+    </div>
+</div>
+{% for category in blogPost.post.categories %}
+    {% if category.name == "News" %}
+    <div id="recent-news">
+        <div class="container pt-5 pb-5">
+            <h1 class="title" style="color: var(--green);">{{"Recent News"|_}}</h1>
+            <div class="row pt-1">
+                {% for post in posts|slice(0,3)|raw  %}
+                <div class="col-12 col-lg-4">
+                    {% if post.featured_images.count %}
+                        {% for image in post.featured_images|slice(0,1)|raw %}
+                            <div
+                                class="recent-img"
+                                style="
+                                    background-image: url('{{ image.path }}');
+                                "
+                            ></div>
+                        {% endfor %}
+                    {% endif %}
+                    <div class="recent-summary p-3 bg-white">
+                        <a
+                                href="{{ post.url }}"
+                                style="cursor: pointer;"
+                            >
+                            <h3 class="title" style="color: var(--blue);">
+                                {{ str_limit(post.title|raw, 170) }}
+                            </h3>
+                        </a>
+                        <div class="recent-date">{{ post.published_at|date('M d, Y') }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if category.name == "Events" %}
+    <div id="recent-news">
+        <div class="container pt-5 pb-5">
+            <h1 class="title" style="color: var(--green);">{{"Recent Events"|_}}</h1>
+            <div class="row pt-1">
+                {% for event in campaignrUpcoming.events|slice(0,3)|raw  %}
+                <div class="col-12 col-lg-4">
+                            <div
+                                class="recent-img"
+                                style="background-image: url('{{ event.description|replace({'![](': '', ')': ''}) }}');"
+                            ></div>
+                    <div class="recent-summary p-3 bg-white">
+                        <a
+                                href="{{ event.slug }}"
+                                style="cursor: pointer;"
+                            >
+                            <h3 class="title" style="color: var(--blue);">
+                                {{ str_limit(event.name|raw, 170) }}
+                            </h3>
+                        </a>
+                        <div class="recent-date">{{ post.published_at|date('M d, Y') }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}

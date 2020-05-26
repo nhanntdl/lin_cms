@@ -1,0 +1,4 @@
+columns:
+    name:
+        label: 'vektar.ourteam::lang.columns.theme.name'
+        type: text

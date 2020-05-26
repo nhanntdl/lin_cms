@@ -1,0 +1,18 @@
+// Counter Section 
+
+.counter-item{
+	.counter-stat{
+		font-size: 50px;
+	}
+
+	p{
+		margin-bottom: 0px;
+	}
+
+}
+
+.bg-counter{
+	background: url("https://placehold.it/1592x340")no-repeat;
+	background-size: cover;
+	@extend .overly-2;
+}

@@ -1,0 +1,48 @@
+fields:
+    name:
+        label: 'vektar.ourteam::lang.models.employee.name'
+        span: auto
+        type: text
+    job_role:
+        label: 'vektar.ourteam::lang.models.employee.job_role'
+        span: auto
+        type: text
+tabs:
+    fields:
+        employeephoto:
+            label: 'vektar.ourteam::lang.models.employee.employeephoto'
+            mode: image
+            useCaption: true
+            imageHeight: 350
+            imageWidth: 260
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: left
+            type: fileupload
+            commentAbove: 'vektar.ourteam::lang.comments.employee.employeephoto'
+            tab: 'Employee Image'
+        facebook_link:
+            label: 'vektar.ourteam::lang.models.employee.facebook_link'
+            placeholder: 'vektar.ourteam::lang.placeholder.employee.facebook'
+            span: full
+            type: text
+            tab: 'Social Media Links'
+        twitter_link:
+            label: 'vektar.ourteam::lang.models.employee.twitter_link'
+            placeholder: 'vektar.ourteam::lang.placeholder.employee.twitter'
+            span: full
+            type: text
+            tab: 'Social Media Links'
+        instagram_link:
+            label: 'vektar.ourteam::lang.models.employee.instagram_link'
+            placeholder: 'vektar.ourteam::lang.placeholder.employee.instagram'
+            span: full
+            type: text
+            tab: 'Social Media Links'
+        linkedin_link:
+            label: 'vektar.ourteam::lang.models.employee.linkedin_link'
+            placeholder: 'vektar.ourteam::lang.placeholder.employee.linkedin'
+            span: full
+            type: text
+            tab: 'Social Media Links'

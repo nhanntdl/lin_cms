@@ -1,0 +1,79 @@
+title = "Our Team"
+url = "/our_team"
+layout = "default"
+is_hidden = 0
+
+[ourteam]
+team = 2
+results = 100
+sortOrder = "name asc"
+
+[ourteam ourteam2]
+team = 3
+results = 100
+sortOrder = "name asc"
+==
+<header id="page-banner" style="background-image: url('{{ '/header/our_team_header.png'|media }}');">
+    <div  class="banner" style="height: 70vh;"
+    >
+        <div
+            class="container d-flex justify-content-center align-items-center flex-column"
+            style="height: 100%; position: relative;"
+        >
+            <section style="
+            position: absolute;
+            left: 0;
+            bottom: 3rem;
+            padding-right: 15px;
+            padding-left: 15px;
+            color: var(--white);
+
+          "
+                     id="content-banner"
+            >
+                <h1 class="title" id="page-title">{{"Our team"|_}}</h1>
+                <div class="d-flex" id="banner-donate-btn">
+                </div>
+            </section>
+        </div>
+    </div>
+</header>
+<link
+    rel="stylesheet"
+    href="{{ 'assets/css/out_team.css'|theme }}"
+/>
+<div id="our-tem">
+    <div class="container pb-5" style="padding-top: 7rem;">
+        <h2 class="title" style="font-weight: 500;">
+            {{"A dynamic team who dedicate for community work"|_}}
+        </h2>
+        <div class="d-flex justify-content-center">
+            <div class="tab m-3" style="cursor: pointer; font-weight: 700; font-size: 30px !important;" id="lin-team-btn" onclick="showLinTeam()">{{"LIN'S TEAM"|_}}</div>
+            <div class="tab m-3" style="cursor: pointer; font-weight: 700; font-size: 30px !important;" id="board-member-btn" onclick="showBoardMember()">{{"BOARD MEMBER"|_}}</div>
+        </div>
+        <div id="lin-team">
+            <div id="members">
+                {% component 'ourteam' %}
+            </div>
+        </div>
+        <div id="board-member">
+            <div id="members">
+                {% component 'ourteam2' %}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function showLinTeam() {
+                document.getElementById("lin-team-btn").classList.add("active");
+                document.getElementById("board-member-btn").classList.remove("active");
+                document.getElementById("lin-team").style.display = "grid";
+                document.getElementById("board-member").style.display = "none";
+            }showLinTeam();
+            function showBoardMember() {
+                document.getElementById("board-member-btn").classList.add("active");
+                document.getElementById("lin-team-btn").classList.remove("active");
+                document.getElementById("board-member").style.display = "grid";
+                document.getElementById("lin-team").style.display = "none";
+            }
+</script>

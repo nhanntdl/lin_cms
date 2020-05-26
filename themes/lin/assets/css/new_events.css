@@ -1,0 +1,133 @@
+.news-image {
+    width: 100%;
+    padding-top: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.news-item {
+    overflow: hidden;
+    min-width: 100%;
+}
+.news-summary {
+    margin-top: 1rem;
+    padding-right: 6rem;
+}
+.news-summary a .title:hover {
+    text-decoration: underline;
+}
+.event-back {
+    max-height: 1300px !important;
+}
+
+#list-example {
+    max-height: 1300px !important;
+}
+#events .containerevents .main {
+    padding-right: 2rem;
+}
+.event-img {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00b373;
+    border-radius: 50%;
+    transition: 0.3s;
+    margin-right: 0.25rem;
+    display: inline-flex;
+    margin-top: 2px;
+}
+.event-back {
+    display: none;
+}
+#list-example .col-lg-6 {
+    max-width: 100% !important;
+    flex: 0 0 100%;
+}
+.event-item {
+    box-sizing: border-box;
+    border-top: 1px solid #f9f9f9;
+    border-bottom: 1px solid #f9f9f9;
+    max-height: 87.5px;
+    min-height: 87.5px;
+    transition: 0.3s;
+}
+.date-event {
+    padding-top: 0.4rem;
+}
+.event-item span {
+    line-height: 1;
+}
+.event-item .item-title {
+    font-family: "Livvic", sans-serif !important;
+    font-weight: 600;
+    color: black;
+}
+.event-item:hover {
+    background-color: var(--green);
+}
+.event-item:hover .dot {
+    background-color: var(--blue);
+}
+.date-event span {
+    transition: 0.3s;
+}
+.event-item:hover .date-event span {
+    color: rgba(255, 255, 255, 0.5);
+}
+.event-item:hover .item-title {
+    color: white;
+}
+.btn-view-events {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+.btn-view-events {
+    cursor: pointer;
+}
+
+#post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+}
+#post-list-after-load-more {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    height: 100%;
+}
+#two-first-post {
+    padding-right: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+    #post-list {
+        grid-template-columns: 100%;
+    }
+    #post-list-after-load-more {
+        grid-template-columns: 100%;
+    }
+    #events {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        margin-top: 3rem;
+        padding-top: 100%;
+        overflow-y: hidden;
+    }
+    #btn-load-more-div {
+        grid-column: 1;
+    }
+}
+#post-list-after-load-more {
+    display: none;
+}

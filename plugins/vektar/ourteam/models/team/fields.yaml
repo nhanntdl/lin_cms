@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: 'vektar.ourteam::lang.models.team.name'
+        span: auto
+        type: text
+        commentAbove: 'vektar.ourteam::lang.comments.team.name'
+tabs:
+    fields:
+        employee:
+            span: full
+            type: partial
+            path: field_employee
+            tab: 'Team Members'

@@ -1,0 +1,114 @@
+title = "Partners"
+url = "/partners"
+layout = "default"
+is_hidden = 0
+
+[ourteam]
+team = 5
+results = 100
+sortOrder = "name asc"
+
+[ourteam ourteam2]
+team = 6
+results = 100
+sortOrder = "name asc"
+
+[ourteam ourteam3]
+team = 7
+results = 100
+sortOrder = "name asc"
+==
+<header style="background-image: url('{{ '/header/partners_header.png'|media }}');" id="page-banner">
+    <div class="banner" style="height: 70vh;"
+    >
+        <div
+            class="container d-flex justify-content-center align-items-center flex-column"
+            style="height: 100%; position: relative;"
+        >
+            <section style="
+            position: absolute;
+            left: 0;
+            bottom: 3rem;
+            padding-right: 15px;
+            padding-left: 15px;
+            color: var(--white);
+
+          "
+                     id="content-banner"
+            >
+                <h1 class="title" id="page-title">{{"Our partners"|_}}</h1>
+                <div class="d-flex" id="banner-donate-btn">
+                </div>
+            </section>
+        </div>
+    </div>
+</header>
+<link
+    rel="stylesheet"
+    href="{{ 'assets/css/partners.css'|theme }}"
+/>
+
+<!-- NPOs Partners -->
+
+<div id="our-tem" style="padding-top: 30px;">
+    <div class="container pt-5 pb-5">
+        <div class="npo" style="padding-bottom: 30px;">
+            <h1 class="title" style="color: var(--blue);">
+                {{"NPOs Partners"|_}}
+            </h1>
+            <a style="padding-bottom: 30px;font-size: 20px;" >
+                {{"We connect and work with 400+ NPO from the South of VietNam."|_}} <a href="http://www.philoinhuan.org/to-chuc/dang-ky" target="blank" class="custom-link"><span style="font-size: 20px; font-weight: bold;">{{"JOIN US"|_}}</span></a>
+            </a>
+        </div>
+
+        <div id="logos">
+            {% component 'ourteam' %}
+        </div>
+    </div>
+</div>
+
+<!-- End NPOs Partners -->
+<!-- Corporate Partners -->
+
+<div id="our-tem" style="">
+    <div class="container pt-5 pb-5">
+        <div class="npo" style="padding-bottom: 30px;">
+            <h1 class="title" style="color: var(--blue);">
+                {{"Corporate Partners"|_}}
+            </h1>
+            <a style="padding-bottom: 30px;font-size: 20px;" >
+                {{"Our partners are there indiviuals, corporations and institutions that <br>
+                provide the financial and human capital use to create <br>
+                impacts on the community."|_}}
+                <a href="http://www.philoinhuan.org/to-chuc/dang-ky" target="blank" class="custom-link"><span style="font-size: 20px; font-weight: bold;">{{"JOIN US"|_}}</span></a>
+            </a>
+        </div>
+
+        <div id="logos">
+            {% component 'ourteam2' %}
+        </div>
+    </div>
+</div>
+
+<!--End Corporate Partners -->
+
+<div id="skill" style="padding-bottom: 50px;">
+    <div class="container pt-5 pb-5">
+        <div style="padding-bottom: 30px;">
+            <h1 class="title" style="color: var(--blue);">
+                {{"Skills Volunteers"|_}}
+            </h1>
+            <a style="padding-bottom: 30px;font-size: 20px;" >
+                {{"Our skills and unskilled volunteers who always support our work.<br>
+                Their commpasions and commitment to community development<br>
+                inspire us daily."|_}}
+                <a href="http://www.philoinhuan.org/to-chuc/dang-ky" target="blank" class="custom-link"><span style="font-size: 20px; font-weight: bold;">{{"JOIN US"|_}}</span></a>
+        </div>
+
+        <div id="skills">
+            <div class="container p-0"></div>
+                {% component 'ourteam3' %}
+            </div>
+        </div>
+    </div>
+</div>

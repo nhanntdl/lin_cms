@@ -1,0 +1,135 @@
+$extraLargeScreen: 1200px;
+$largeScreen: 992px;
+$mediumScreen: 768px;
+$smallScreen: 576px;
+
+@mixin extraLargeScreen {
+    @media (max-width: #{$extraLargeScreen}) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+    @media (max-width: #{$largeScreen}) {
+        @content;
+    }
+}
+
+@mixin mediumScreen {
+    @media (max-width: #{$mediumScreen}) {
+        @content;
+    }
+}
+
+@mixin smallScreen {
+    @media (max-width: #{$smallScreen}) {
+        @content;
+    }
+}
+
+
+#ourteam {
+
+	.ourteam-col {
+		padding: 0;
+
+		&:hover .ourteam-info {
+			opacity: 1;
+		}
+
+		&:hover .overlay {
+			opacity: 0.6;
+		}
+
+		&:hover .ourteam-info h3 {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		&:hover .ourteam-info h5 {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		&:hover .ourteam-info .ourteam-social .social-links {
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		.overlay {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			right: 0;
+			max-width: 350px;
+			margin: auto;
+			opacity: 0;
+			transition: all 1s ease;
+			z-index: 0;
+		}
+
+		.ourteam-info {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			right: 0;
+			max-width: 350px;
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			color: #fff;
+			z-index: 1;
+			transition: all 0.8s ease;
+			overflow: hidden;
+
+				h3 {
+					transform: translateY(-300px);
+					transition: all 0.7s ease;
+					opacity: 0;
+				}
+
+				h5 {
+					transform: translateY(300px);
+					transition: all 0.8s ease;
+					opacity: 0;
+				}
+
+				.ourteam-social {
+					display: flex;
+					flex-direction: row;
+
+						.social-links {
+							font-size: 1.5em;
+							transition: transform 0.8s ease;
+							transform: translateY(300px);
+							color: #fff;
+							margin-right: 8px;
+							cursor: pointer;
+
+								&:hover {
+									filter: brightness(80%);
+									transition: none;
+								}
+						}
+
+						.twitter {
+							transition-delay: 100ms;
+						}
+
+						.facebook {
+							transition-delay: 140ms;
+						}
+
+						.instagram {
+							transition-delay: 180ms;
+						}
+
+						.linkedin {
+							transition-delay: 220ms;
+						}
+				}
+		}
+	}
+}

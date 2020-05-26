@@ -1,0 +1,524 @@
+title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "news"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "single-news-post"
+
+[campaignrUpcoming]
+sorting = "checked"
+evtNumber = 100
+eventPage = "single-news-post"
+eventSlug = ":slug"
+
+[contactForm]
+
+[contactForm contactFormFooter]
+==
+<!-- Banner -->
+<header style="background-color: var(--blue);">
+    <div id="page-banner" class="banner" style="height: 1080px;"
+>
+    <div
+        class="container d-flex justify-content-center align-items-center flex-column"
+        style="height: 100%; position: relative;"
+    >
+        <div
+            class="d-flex justify-content-center align-items-center"
+            style="position: relative; transform: translateY(-10%);"
+        >
+            <img
+                *ngIf="isDonateBtn"
+                src="{{ '/header/home_background.png'|media }}"
+                alt=""
+                width="100%"
+                style="position: absolute;"
+                id="homebannerlayout"
+            />
+            <img
+                *ngIf="isDonateBtn"
+                src="{{ '/header/home_header.png'|media }}"
+                alt=""
+                width="99%"
+                id="homebannerimage"
+            />
+        </div>
+        <section style="
+            position: absolute;
+            left: 0;
+            bottom: 2rem;
+            padding-right: 15px;
+            padding-left: 15px;
+            color: var(--white);
+
+          "
+                 id="content-banner"
+        >
+            <h1 class="title" id="page-title">{{ 'LIN is helping local people meet the local needs.'|_ }}</h1>
+            <div class="d-flex" id="banner-donate-btn">
+                <div
+                    class="d-flex align-items-center"
+                    style="cursor: pointer;"
+                    *ngIf="isDonateBtn"
+                >
+                    <img
+                        src="{{ '/header/semi circle - left.png'|media }}"
+                        style="display: inline-block; height: 25px;"
+                    />
+                    <a href="{{'donate'| page}}">
+                      <span
+                          class="pr-1 pl-1"
+                          style="
+                          display: inline-block;
+                          font-size: 40px;
+                          color: #2ec56ced;
+                          font-weight: 800 !important;
+                          line-height: 30px;
+                        "
+                      >{{'DONATE'|_}}</span
+                      >
+                    </a>
+                    <img
+                        src="{{ '/header/semi circle - right.png'|media }}"
+                        style="display: inline-block; height: 25px;"
+                    />
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</header>
+<!-- /Banner -->
+<link
+    rel="stylesheet"
+    href="{{ 'assets/css/home.css'|theme }}"
+/>
+<!--WHAT WE DO-->
+<div id="WhatWeDo">
+  <div class="container-fluid d-flex justify-content-center">
+    <img
+      src="{{ '/home/logoWhite.png'|media }}"
+      alt="logo"
+      style="width: 25%; position: absolute; top: 0; right: 0;"
+      id="what-we-do-back"
+    />
+    <div class="d-flex justify-content-center">
+      <div class="container">
+        <div class="d-flex justify-content-between" style="width: 100%;">
+          <div class="d-flex align-items-center" id="whatewdotitle">
+            <h1 class="title" style="color: var(--blue);">{{'What we do'|_}}?</h1>
+          </div>
+        </div>
+        <div class="d-flex justify-content-start mb-5" id="what-ew-do-content">
+          <div
+            class="col-12 col-md-4 col-lg-3 p-0 pb-5 what-we-do-item"
+          >
+            <div class="col-12 col-lg-3 col-md-2 col-sm-2 p-0 mb-3 content-icon">
+              <img src="{{ '/home/iconHand.png'|media }}" id="iconDisplay" />
+            </div>
+            <div class="col-12 col-lg-5 col-md-7 col-sm-12 p-0">
+              <p >
+                <b style="color: var(--blue); font-weight: 600; font-family: 'Livvic', sans-serif; font-size: 30px">{{ 'Information Sharing'|_ }}</b>
+              </p>
+            </div>
+            <div class="col-12 col-lg-9 col-md-10 col-sm-11 p-0">
+              <p style="font-weight: 500;">
+                {{'Enhance access to Information, expand networks, build
+                understanding and trust ocross sector for increased engagement
+                in community development'|_}}
+              </p>
+            </div>
+            <div class="mt-3 p-0" id="widthButton">
+              <button class="rectangle-btn" onclick="window.location='information-sharing'" style="white-space:nowrap">
+                {{'LEARN MORE'|_}}
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 col-lg-3 p-0 pb-5 what-we-do-item"
+          >
+            <div class="col-12 col-lg-3 col-md-2 col-sm-2 p-0 mb-3 content-icon">
+              <img src="{{ '/home/iconConfig.png'|media }}" id="iconDisplay" />
+            </div>
+            <div class="col-12 col-lg-5 col-md-7 col-sm-12 p-0">
+              <p>
+                <b style="color: var(--blue); font-weight: 600; font-family: 'Livvic', sans-serif; font-size: 30px">{{'Capacity Building'|_}}</b>
+              </p>
+            </div>
+            <div class="col-12 col-lg-9 col-md-10 col-sm-11 p-0">
+              <p style="font-weight: 500;">
+                {{'Empower local NPOs, skilled volunteers, and donors with tools and knowledge to effectively address social challenges and inequalities.'|_}}
+              </p>
+            </div>
+            <div class=" mt-3 p-0" id="widthButton">
+              <button class="rectangle-btn" onclick="window.location='capacity-building'" style="white-space:nowrap">
+                {{'LEARN MORE'|_}}
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 col-lg-3 p-0 pb-5 what-we-do-item"
+          >
+            <div class="col-12 col-lg-3 col-md-2 col-sm-2 p-0 mb-3 content-icon">
+              <img src="{{ '/home/iconPeople.png'|media }}"  id="iconDisplay" />
+            </div>
+            <div class="col-12 col-lg-5 col-md-7 col-sm-12 p-0">
+              <p>
+                <b style="color: var(--blue); font-weight: 600; font-family: 'Livvic', sans-serif; font-size: 30px">{{'Resource Mobilization'|_}}</b>
+              </p>
+            </div>
+            <div class="col-12 col-lg-9 col-md-10 col-sm-11 p-0">
+              <p style="font-weight: 500;">
+                {{'Leverage community resources: financial, human, shared working space, technology, and networks, for NPOs to fulfill their capacity for sustainable development.'|_}}'
+              </p>
+            </div>
+            <div class="mt-3 p-0" id="widthButton">
+              <button class="rectangle-btn" onclick="window.location='resource-mobilization'" style="white-space:nowrap">
+                {{'LEARN MORE'|_}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--END WHAT WE DO-->
+
+<!--SUBSCRIBE-->
+<div id="Sub">
+  <div class="container-fluid d-flex justify-content-center">
+    <div class="container">
+      <div class="d-flex justify-content-center flex-column text-center" >
+        <div class="d-flex justify-content-center flex-column text-center" id="start">
+          <h1 class="title" style="color: var(--green);">
+            {{'Be a part of the community'|_}}
+          </h1>
+          <p style="color: white;">
+            {{'Subscribe to our mailing list to receive updates about our news and
+            events'|_}}
+          </p>
+        </div>
+
+        <div class="col-xl-7 col-lg-8 col-12 d-flex justify-content-start justify-content-lg-center pt-2 pb-2" style="margin: auto" id="padding">
+            {% component 'contactForm' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="ourimpact" class="container-fluid d-flex justify-content-center align-items-center my-0 my-lg-5" style="overflow: hidden !important;">
+  <div class="container d-flex justify-content-center" id="fullDisplay">
+    <!-- <div id="imageImpact" class="col-12 col-lg-6 imgImage" style="background-image: url('{{ '/home/photoSub.png'|media }}');"></div> -->
+    <img class="imgImage" src="{{ '/home/photoSub.png'|media }}" alt="" width="120%" height="auto">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center py-5 " style="background-color: var(--green);">
+      <div class="d-flex flex-column ourimpact-content " style="max-width: 60%;">
+        <div class="mb-2">
+          <h2 class="title" id="text1">{{'Our impact'|_}}</h2>
+          <span style="color: white;">
+            {{'10 years with more than 9,000 beneficiaries and many sustainable
+            impacts on the community. Study an our impact here'|_}}
+          </span>
+        </div>
+        <div class="d-flex mt-2" id="banner-donate-btn">
+            <div
+                class="d-flex align-items-center"
+                style="cursor: pointer;"
+                *ngIf="isDonateBtn"
+            >
+                <img
+                    src="{{ '/home/leftWhite.png'|media }}"
+                    style="display: inline-block; height: 22px;"
+                    id="iconImage"
+                />
+                <a href="pdf">
+                  <span
+                      class="pr-1 pl-1"
+                      style="
+                      display: inline-block;
+                      font-size: 30px;
+                      color: white;
+                      font-weight: 800;
+                      line-height: 15px !important;
+                      white-space: nowrap;
+                    "
+                    id="textLink"
+                  >{{'2019 ANNUAL REPORT'|_}}</span
+                  >
+                </a>
+                <img
+                    src="{{ '/home/rightWhite.png'|media }}"
+                    style="display: inline-block; height: 22px;"
+                    id="iconImage"
+                />
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="imageImpact" class="col-12 col-lg-6 imgImage" style="background-image: url('{{ '/home/photoSub.png'|media }}');"></div>
+  </div>
+</div>
+
+<!-- Resources -->
+<img src="{{ '/home/photo.png'|media }}" alt="" width="100%" height="auto" id="img-phone-resource">
+<div id="home-resources">
+  <div class="container-fluid d-flex justify-content-center">
+    <div
+      id="resources-image"
+      style="background-image: url('{{ '/home/photo.png'|media }}');"
+    ></div>
+    <div class="container">
+      <div class="d-flex justify-content-end">
+        <div
+          class="col-12 col-lg-5 content d-flex flex-column justify-content-center"
+          style="color: var(--white);"
+        >
+          <div class="cola">
+            <h1 class="title">{{'Resources'|_}}</h1>
+            <span class="sub-title">
+              {{'LIN enhances capacity of local NPOs, volunteer and donor'|_}}
+            </span>
+          </div>
+          <ul class="p-0 pt-5">
+            <li
+              class="pb-3 pt-3 d-flex align-items-center flex-column flex-lg-row"
+            >
+              <div
+                class="for_ rounded-circle d-flex flex-column justify-content-center align-items-center"
+              >
+                <span>{{'For'|_}}</span><span> {{'NPOs'|_}}</span>
+              </div>
+              <span class="resource-item-content">
+                {{'LIN supports local nonprofits that improve access to
+                opportunities for disadvantaged people or enhance the quality of
+                life for all people in HCMC.'|_}}
+              </span>
+            </li>
+            <li
+              class="pb-3 pt-3 d-flex align-items-center flex-column flex-lg-row"
+            >
+              <div
+                class="for_ rounded-circle d-flex flex-column justify-content-center align-items-center"
+              >
+                <span>{{'For'|_}}</span><span> {{'Volunteers'|_}}</span>
+              </div>
+              <span class="resource-item-content">
+                LIN helps to match volunteers with a range of professional
+                skills who want to help build the capacity of local nonprofit
+                organizations.
+                </span
+              >
+            </li>
+            <li
+              class="pb-3 pt-3 d-flex align-items-center flex-column flex-lg-row"
+            >
+              <div
+                class="for_ rounded-circle d-flex flex-column justify-content-center align-items-center"
+              >
+                <span>For</span><span> Donors</span>
+              </div>
+              <span class="resource-item-content">
+                {{'LIN helps donor that want to engage in strategic
+                philanthropy.'|_}}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /Resources -->
+
+<!--NEW EVENT-->
+<div class="container" style="padding-bottom: 6rem;" id="new-event">
+  <h1 class="title pt-5 pb-0 pb-lg-5" style="color: var(--blue);">
+    {{'News & Events'|_}}
+  </h1>.
+  <div class="d-flex" id="nonmargin">
+    <a
+      class="carousel-control-prev"
+      style="opacity: 1; width: unset;text-decoration: none;"
+      href="#carouselExampleControls"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="" aria-hidden="true">
+        <img src="{{ '/home/Layer 1031.png'|media }}" alt="" width="100%" id="nextImage"
+      /></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <div
+      id="carouselExampleControls"
+      class="carousel slide mt-3 mb-3"
+      data-ride="carousel"
+      style="width: 100%; "
+    >
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="child-carousel-item d-flex justify-content-between">
+            {% for post in posts.slice(0, 2) %}
+              {% if post.featured_images.count %}
+                {% for image in post.featured_images|slice(0, 1)|raw %}
+                <div
+                  class="carousel _image"
+                  style="position: relative; background-image: url('{{ image.path }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;  min-height: 500px; max-height: 500px;"
+                >
+                <p style="position: absolute;top: 10px; left: 30px;color: white;" class="recent-date">{{ post.published_at|date('M d, Y') }}</p>
+                  <div class="d-flex align-items-center information">
+                    <div
+                      class="col-12 col-md-7 d-flex align-items-center"
+                    >
+                      <p class="mb-0">
+                        <a href="{{ post.url }}" style="text-decoration: none;"><b style="color: white; font-size: 20px;">{{ post.title }}</b></a>
+                      </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="carousel-item">
+                    <div class="child-carousel-item d-flex justify-content-between">
+            {% for post in posts.slice(2, 2) %}
+              {% if post.featured_images.count %}
+                {% for image in post.featured_images|slice(0,1)|raw %}
+                <div
+                  class="carousel _image"
+                  style="position: relative; background-image: url('{{ image.path }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;  min-height: 500px; max-height: 500px;"
+                >
+                <p style="position: absolute;top: 10px; left: 30px;color: white;" class="recent-date">{{ post.published_at|date('M d, Y') }}</p>
+                  <div class="d-flex align-items-center information">
+                    <div
+                      class="col-12 col-md-7 d-flex align-items-center"
+                    >
+                      <p class="mb-0">
+                        <a href="{{ post.url }}" style="text-decoration: none;"><b style="color: white; font-size: 20px;">{{ post.title }}</b></a>
+                      </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="carousel-item" >
+                    <div class="child-carousel-item d-flex justify-content-between">
+            {% for post in posts.slice(4, 2) %}
+              {% if post.featured_images.count %}
+                {% for image in post.featured_images|slice(0,1)|raw %}
+                <div
+                  class="carousel _image"
+                  style="position: relative; background-image: url('{{ image.path }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;  min-height: 500px; max-height: 500px;"
+                >
+                <p style="position: absolute;top: 10px; left: 30px;color: white;" class="recent-date">{{ post.published_at|date('M d, Y') }}</p>
+                  <div class="d-flex align-items-center information">
+                    <div
+                      class="col-12 col-md-7 d-flex align-items-center"
+                    >
+                      <p class="mb-0">
+                        <a href="{{ post.url }}" style="text-decoration: none;"><b style="color: white; font-size: 20px;">{{ post.title }}</b></a>
+                      </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="carousel-item">
+                    <div class="child-carousel-item d-flex justify-content-between" >
+            {% for post in posts.slice(6, 2) %}
+              {% if post.featured_images.count %}
+                {% for image in post.featured_images|slice(0,1)|raw %}
+                <div
+                  class="carousel _image"
+                  style="position: relative; background-image: url('{{ image.path }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;  min-height: 500px; max-height: 500px;"
+                >
+                <p style="position: absolute;top: 10px; left: 30px;color: white;" class="recent-date">{{ post.published_at|date('M d, Y') }}</p>
+                  <div class="d-flex align-items-center information">
+                    <div
+                      class="col-12 col-md-7 d-flex align-items-center"
+                    >
+                      <p class="mb-0">
+                        <a href="{{ post.url }}" style="text-decoration: none;"><b style="color: white; font-size: 20px;">{{ post.title }}</b></a>
+                      </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="carousel-item">
+                    <div class="child-carousel-item d-flex justify-content-between">
+                      <p style="position: absolute;top: 10px; left: 30px;color: white;" class="recent-date">{{ post.published_at|date('M d, Y') }}</p>
+            {% for post in posts.slice(8, 2) %}
+              {% if post.featured_images.count %}
+                {% for image in post.featured_images|slice(0,1)|raw %}
+                <div
+                  class="carousel _image"
+                  style="position: relative;background-image: url('{{ image.path }}'); background-position: center center; background-repeat: no-repeat; background-size: cover;  min-height: 500px; max-height: 500px;"
+                >
+                <p style="position: absolute;top: 10px; left: 30px;color: white;" class="recent-date">{{ post.published_at|date('M d, Y') }}</p>
+
+                  <div class="d-flex align-items-center information">
+                    <div
+                      class="col-12 col-md-7 d-flex align-items-center"
+                    >
+                      <p class="mb-0">
+                        <a href="{{ post.url }}" style="color: white;text-decoration: none;"><b style="color: white; font-size: 20px;">{{ post.title }}</b></a>
+                      </p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <a
+      class="carousel-control-next"
+      style="opacity: 1; width: unset;"
+      href="#carouselExampleControls"
+      role="button"
+      data-slide="next"
+    >
+      <span class="" aria-hidden="true"
+        ><img src="{{ '/home/Layer 1030.png'|media }}" alt="" width="100%" id="nextImage"
+      /></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div>
+    {% component 'campaignrUpcoming' %}
+  </div>
+</div>
+

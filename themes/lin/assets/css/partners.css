@@ -1,0 +1,143 @@
+.tab {
+    font-family: "Livvic", sans-serif !important;
+    font-weight: 600;
+    color: var(--blue);
+}
+.tab.active {
+    border-bottom: 2px solid var(--blue);
+    border-bottom-width: 90%;
+}
+.team-members-avt {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.content-member {
+    color: white;
+    display: none;
+}
+.custom-link {
+    color: black;
+    text-decoration: underline var(--green);
+    transition: 0.1s;
+}
+.custom-link:hover {
+    color: var(--green);
+    text-decoration: none !important;
+}
+.custom-link:hover a {
+    color: var(--green);
+    text-decoration: none !important;
+}
+.btn-logo-detail {
+    height: 25px;
+    cursor: pointer;
+}
+#our-tem .title {
+    max-width: 40%;
+}
+
+#logos .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+@media only screen and (max-width: 768px) {
+    #our-tem .title {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    #logos .container {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+    #our-tem .container {
+        padding: 0;
+        max-width: 100%;
+    }
+    .npo {
+        padding: 15px;
+        max-width: 100%;
+    }
+}
+
+/* skill */
+
+.team-skills-avt {
+    width: 100%;
+    padding-top: 20%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.content {
+    color: white;
+}
+.skill-name {
+    font-size: large;
+    font-weight: 600;
+}
+.btn-skill-detail {
+    height: 25px;
+    cursor: pointer;
+}
+#skill-tem .title {
+    max-width: 40%;
+}
+
+#skills .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+#skills .container .team-members-avt {
+    display: none;
+}
+#skills .container .content-member {
+    display: flex;
+    background-color: transparent !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+#skills .container .item-box {
+    background-color: transparent !important;
+}
+#skills .container .member-description {
+    display: none;
+}
+#skills .container .member-name {
+    color: black;
+    font-size: large !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    text-align: justify !important;
+}
+#skills .container .member-btn {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #skill-tem .title {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+    #skills .container {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+    #skill .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    #skill {
+        text-align: center;
+    }
+}

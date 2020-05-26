@@ -1,0 +1,259 @@
+<footer style="color: white; position: relative;">
+    <div class="container-fluid" style="background-color: var(--blue); position: relative;">
+        <div class="container pb-4">
+            <img src="{{ '/footer/logoWhite.png'|media }}" alt="logo" id="logoBig" />
+            <div class="row justify-content-start mb-4">
+                <img src="{{ '/global/logo.png'|media }}" alt="logo" id="logoSmall" />
+            </div>
+            <div class="row" id="flexColumn">
+                <div class="col-4 p-0" id="box1">
+                    <div class="col-10 p-0 d-flex flex-column">
+                        <span>{{'LIN Center for Community Development, 63A Nguyen Cu
+                            street, Thao Dien Ward, District 2, Ho Chi Minh
+                            City, Viet Nam'|_}}</span>
+                        <span>+84 28 7304 6884</span>
+                        <span>info@linvn.org</span>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-center p-0" id="box2">
+                    <div class="col-6 p-0 d-flex flex-column" id="box2">
+                        <span id="bold">{{'Report'|_}}</span>
+                        <span id="bold">{{'Resource'|_}}</span>
+                        <span id="bold">{{'Narrow the Gap'|_}}</span>
+                        <span id="bold">{{'Annual Conference'|_}}</span>
+                        <span id="bold">{{'NPO Services'|_}}</span>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-end p-0" id="box3">
+                    <div class="col-10 p-0 d-flex flex-column">
+                        <h2>{{'Stay in touch'|_}}</h2>
+                        <span>{{'Sign up for our news and events'|_}}</span>
+                        {% component 'ctf' %}
+                        <span style="font-size: 12px;margin-top: 10px; display: none;" id="privacy"> {{'By click "Submit" I
+                            accept the'|_}}
+                            <a style="
+                                    text-decoration: underline;
+                                    margin-bottom: 0;
+                                    font-size: 12px;
+                                " id="bold">
+                                {{'Privacy Policy'|_}}
+                            </a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between mt-2" id="distanceIcon">
+                <div class="col-8 p-0 d-flex ">
+                    <a href="https://www.facebook.com/LINCenter/" target="blank">
+                        <i class="fab fa-facebook-square mr-3" id="sizeIcon" style="font-size: 30px; color: white;"
+                            aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/1353823" target="blank">
+                        <i class="fab fa-instagram mr-3" id="sizeIcon" style="font-size: 30px; color: white;"
+                            aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/1353823" target="blank">
+                        <i class="fab fa-invision mr-3" id="sizeIcon" style="font-size: 30px; color: white;"
+                            aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/1353823" target="blank">
+                        <i class="fas fa-dove mr-3" id="sizeIcon" style="font-size: 30px; color: white;"
+                            aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/1353823" target="blank">
+                        <i class="fab fa-pinterest mr-3" id="sizeIcon" style="font-size: 30px; color: white;"
+                            aria-hidden="true"></i>
+                    </a>
+
+                    <a href="https://www.youtube.com/user/TheLINCenter" target="blank">
+                        <i class="fab fa-youtube mr-3" id="sizeIcon" style="font-size: 30px; color: white;"
+                            aria-hidden="true"></i>
+                    </a>
+
+                </div>
+                <div class="col-4 p-0 d-flex justify-content-end">
+                    <div class="col-10 p-0">
+                        <span id="privacy1" style="font-size: 15px;"> {{'By
+                            click
+                            "Submit" I accept the'|_}}
+                            <a style="
+                        text-decoration: underline;
+                        margin-bottom: 0;
+                        font-size: 15px;
+                        cursor: pointer;" id="bold">
+                                {{'Privacy Policy'|_}}
+                            </a></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row justify-content-center mt-5" style="
+            text-align: center;">
+                Copyright © 2020 ‧ LIN Center for Community Development ‧ All rightsreserved
+            </div>
+            <img onclick="topFunction()" src="{{ '/footer/arrow_top.png'|media }}" alt="arrow top" id="arrowTop" />
+        </div>
+    </div>
+    </div>
+
+</footer>
+<script>
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+
+
+<style>
+    .fb-livechat,
+    .fb-widget {
+        display: none
+    }
+
+    .ctrlq.fb-button,
+    .ctrlq.fb-close {
+        position: fixed;
+        right: 24px;
+        cursor: pointer;
+    }
+
+    .ctrlq.fb-button {
+        z-index: 999;
+        background: url('../storage/app/media/mess.png') center no-repeat var(--green);
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        bottom: 30px;
+        border: 0;
+        outline: 0;
+        border-radius: 60px;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        -ms-border-radius: 60px;
+        -o-border-radius: 60px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, .06), 0 2px 32px rgba(0, 0, 0, .16);
+        -webkit-transition: box-shadow .2s ease;
+        background-size: 80%;
+        transition: all .2s ease-in-out
+    }
+
+    .ctrlq.fb-button:focus,
+    .ctrlq.fb-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .09), 0 4px 40px rgba(0, 0, 0, .24)
+    }
+
+    .fb-widget {
+        background: #fff;
+        z-index: 1000;
+        position: fixed;
+        width: 360px;
+        height: 250px;
+        overflow: hidden;
+        opacity: 0;
+        bottom: 0;
+        right: 24px;
+        border-radius: 10px;
+        -o-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 0 5px 40px rgba(0, 0, 0, .16);
+        -webkit-box-shadow: 0 5px 40px rgba(0, 0, 0, .16);
+        -moz-box-shadow: 0 5px 40px rgba(0, 0, 0, .16);
+        -o-box-shadow: 0 5px 40px rgba(0, 0, 0, .16)
+    }
+
+    .fb-credit {
+        text-align: center;
+        margin-top: 8px
+    }
+
+    .fb-credit a {
+        transition: none;
+        color: #bec2c9;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        text-decoration: none;
+        border: 0;
+        font-weight: 400
+    }
+
+    .ctrlq.fb-overlay {
+        z-index: 0;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        -webkit-transition: opacity .4s, visibility .4s;
+        transition: opacity .4s, visibility .4s;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .05);
+        display: none
+    }
+
+    .ctrlq.fb-close {
+        z-index: 4;
+        padding: 0 6px;
+        background: var(--green);
+        font-weight: 700;
+        font-size: 11px;
+        color: #fff;
+        margin: 8px;
+        border-radius: 3px
+    }
+
+    .ctrlq.fb-close::after {
+        content: "X";
+        font-family: sans-serif
+    }
+
+    .bubble {
+        width: 20px;
+        height: 20px;
+        background: #c00;
+        color: #fff;
+        position: absolute;
+        z-index: 999999999;
+        text-align: center;
+        vertical-align: middle;
+        top: -2px;
+        left: -5px;
+        border-radius: 50%;
+    }
+
+    .bubble-msg {
+        width: 120px;
+        left: -140px;
+        top: 5px;
+        position: relative;
+        background: rgba(59, 89, 152, .8);
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 13px;
+    }
+</style>
+
+
+
+
+<div class="fb-livechat">
+    <div class="ctrlq fb-overlay"></div>
+    <div class="fb-widget">
+        <div class="ctrlq fb-close"></div>
+        <div class="fb-page" data-href="https://www.facebook.com/LINCenter" data-tabs="messages" data-width="360"
+            data-height="250" data-small-header="true" data-hide-cover="true" data-show-facepile="false">
+        </div>
+        <div id="fb-root"></div>
+    </div>
+    <a href="https://m.me/LINCenter" title="Gửi tin nhắn cho chúng tôi qua Facebook" class="ctrlq fb-button">
+        <!-- <div class="bubble">1</div> -->
+
+    </a>
+    <!-- <div class="bubble-msg">Bạn cần hỗ trợ?</div> -->
+</div>
+<script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>jQuery(document).ready(function ($) { function detectmob() { if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) { return true; } else { return false; } } var t = { delay: 125, overlay: $(".fb-overlay"), widget: $(".fb-widget"), button: $(".fb-button") }; setTimeout(function () { $("div.fb-livechat").fadeIn() }, 8 * t.delay); if (!detectmob()) { $(".ctrlq").on("click", function (e) { e.preventDefault(), t.overlay.is(":visible") ? (t.overlay.fadeOut(t.delay), t.widget.stop().animate({ bottom: 0, opacity: 0 }, 2 * t.delay, function () { $(this).hide("slow"), t.button.show() })) : t.button.fadeOut("medium", function () { t.widget.stop().show().animate({ bottom: "30px", opacity: 1 }, 2 * t.delay), t.overlay.fadeIn(t.delay) }) }) } });</script>

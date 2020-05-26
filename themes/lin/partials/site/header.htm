@@ -1,0 +1,287 @@
+==
+<!-- Header -->
+<header style="background-color: var(--blue);">
+    <!-- Menu -->
+    <div
+        class="container-fluid"
+        id="menu"
+        style="position: absolute; height: 10vh;"
+    >
+        <div class="d-flex justify-content-between" style="width: 100%;">
+            <a
+                class="logo mt-4"
+                style="cursor: pointer;"
+                href="{{'home'| page}}"
+            >
+                <img
+                    src="{{ '/global/logo.png'|media }}"
+                    alt="logo"
+                    id="logo-top"
+                />
+            </a>
+            <a
+                href="{{'donate'| page}}"
+                style="
+                    text-decoration: none;
+                    font-size: 25px;
+                    max-height: 35px;
+                    line-height: 1 !important;
+                    white-space: nowrap;
+                "
+                class="rectangle-btn donate-phone"
+            >
+                <span>
+                    {{'DONATE'|_}}
+                </span>
+            </a>
+            <div id="btn-menu" onclick="toggleMenu()" class="">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="container" id="menu-top">
+                <nav style="z-index: 99999;">
+                    <ul
+                        class="d-flex justify-content-center p-0"
+                        style="list-style: none;"
+                    >
+                        <li class="menu-item home">
+                            <a
+                                class="text-center text-shadow menu-item"
+                                id="aMenu"
+                                href="{{'home'| page}}"
+                                >{{'Home'|_}}</a
+                            >
+                        </li>
+                        <li
+                            class="menu-item"
+                            style="position: relative; cursor: pointer;"
+                            id="about"
+                        >
+                            <a
+                                class="text-center text-shadow menu-item"
+                                id="aMenu"
+                                >{{'About'|_}}</a
+                            >
+                            <ul
+                                id="sub-menu"
+                                class="justify-content-center align-items-start flex-column p-0"
+                            >
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'about'| page}}"
+                                        >{{'About'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'our_team'| page}}"
+                                        >{{'Our team'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'partners'| page}}"
+                                        >{{'Partners'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'impact_report'| page}}"
+                                        >{{'Impact & reports'|_}}</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li
+                            class="menu-item"
+                            style="position: relative; cursor: pointer;"
+                            id="about"
+                        >
+                            <a
+                                class="text-center text-shadow menu-item"
+                                id="aMenu"
+                                href="{{'what_we_do'| page}}"
+                                >{{'What we do'|_}}</a
+                            >
+                            <ul
+                                id="sub-menu"
+                                class="justify-content-center align-items-start flex-column p-0"
+                            >
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'information_sharing'| page}}"
+                                        >{{'Information Sharing'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'capacity_building'| page}}"
+                                        >{{'Capacity Building'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'resource_mobilization'| page}}"
+                                        >{{'Resource Mobilization'|_}}</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a
+                                class="text-center text-shadow menu-item"
+                                id="aMenu"
+                                href="{{'new_events'| page}}"
+                                >{{'News & events'|_}}</a
+                            >
+                        </li>
+                        <li
+                            class="menu-item"
+                            style="position: relative; cursor: pointer;"
+                            id="about"
+                        >
+                            <a
+                                class="text-center text-shadow menu-item"
+                                id="aMenu"
+                            >
+                                {{'Get involved'|_}}</a
+                            >
+                            <ul
+                                id="sub-menu"
+                                class="justify-content-center align-items-start flex-column p-0"
+                            >
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'for_npos'| page}}"
+                                        >{{'Become an NPO Partner'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'for_donors'| page}}"
+                                        >{{'Become a Donor'|_}}</a
+                                    >
+                                </li>
+                                <li
+                                    class="d-flex menu-item sub"
+                                    style="width: 100%;"
+                                >
+                                    <a
+                                        class="text-left menu-item sub pl-2 pr-3"
+                                        href="{{'for_volunteers'| page}}"
+                                        >{{'Become a Volunteer'|_}}</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="my-4">
+                            <span
+                                class="text-left menu-item font-weight-bold"
+                                style="
+                                    cursor: pointer;
+                                    position: relative;
+                                    color: var(--green);
+                                "
+                                id="lang"
+                                onclick="changeLang()"
+                                >{{ 'VN'|_ }}</span
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <ul class="" style="list-style: none;" id="donate-lang">
+                <li class="my-4 mx-1">
+                    <a
+                        href="{{'donate'| page}}"
+                        style="
+                            text-decoration: none;
+                            font-size: 25px;
+                            max-height: 35px;
+                            line-height: 1 !important;
+                            white-space: nowrap;
+                        "
+                        class="font-weight-bold rectangle-btn p-1"
+                    >
+                        {{'DONATE'|_}}
+                    </a>
+                </li>
+                <li class="my-4 mx-1">
+                    <span
+                        class="text-center font-weight-bold text-shadow"
+                        style="
+                            font-size: 25px;
+                            cursor: pointer;
+                            position: relative;
+                        "
+                        id="lang"
+                        onclick="changeLang()"
+                        >{{ 'VN'|_ }}</span
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- /Menu -->
+</header>
+<!-- /Header -->
+<script>
+    function changeLangHome() {
+        String.prototype.replaceAt = function (index, replacement) {
+            return (
+                this.substr(0, index) +
+                replacement +
+                this.substr(index + replacement.length)
+            );
+        };
+        lang = window.location.pathname;
+        if (lang.includes("/vn")) {
+            location.replace(window.location.origin + "/vn");
+        } else {
+            if (lang.includes("/en")) {
+                href = lang.replace("/en", "/vn");
+                location.replace(window.location.origin);
+            } else {
+                location.replace(window.location.origin + "/vn");
+            }
+        }
+    }
+</script>

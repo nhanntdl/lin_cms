@@ -1,0 +1,209 @@
+title = "New Events"
+url = "/new-events"
+layout = "default"
+is_hidden = 0
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "news"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "single-news-post"
+[campaignrUpcoming]
+sorting = "checked"
+evtNumber = 100
+eventPage = "single-news-post"
+eventSlug = ":slug"
+==
+<link rel="stylesheet" href="{{ 'assets/css/new_events.css'|theme }}" />
+<header
+    style="background-image: url('{{ '/event/Layer608.png'|media }}');"
+    id="page-banner"
+>
+    <div class="banner" style="height: 100vh;">
+        <div
+            class="container d-flex justify-content-center align-items-center flex-column"
+            style="height: 100%; position: relative;"
+        >
+            <section
+                style="
+                    position: absolute;
+                    left: 0;
+                    bottom: 3rem;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    color: var(--white);
+                "
+                id="content-banner"
+            >
+                <h1 class="title" id="page-title">
+                    {{"Featured news or event heading goes here"|_}}
+                </h1>
+                <div class="d-flex" id="banner-donate-btn"></div>
+            </section>
+        </div>
+    </div>
+</header>
+<div id="news-events" class="container pt-5 pb-5">
+    <!-- Events -->
+    <div class="mb-5">
+        <div class="row">
+
+            <div class="col-12 col-lg-12 mb-5" id="events-list">
+                <div class="d-flex justify-content-between">
+                    <h2 class="title" style="color: var(--green);">
+                        {{"Upcomming events"|_}}
+                    </h2>
+                    <div>
+                        <img
+                            src="{{ '/event/listView.png'|media }}"
+                            alt=""
+                            class="btn-view-events"
+                        />
+                        <img
+                            src="{{ '/event/monthView.png'|media }}"
+                            alt=""
+                            class="btn-view-events"
+                        />
+                    </div>
+                </div>
+                <div
+                    id="list-example"
+                    class="col-12 d-flex"
+                    data-spy="scroll"
+                    data-target="scrollText"
+                    data-offset="10"
+                    style="
+                        max-height: 875px;
+                        overflow-y: scroll;
+                        padding: 0px;
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        background-color: #ebebeb;
+                    "
+                >
+                    {% component 'campaignrUpcoming' %}
+                </div>
+                <!-- event list -->
+            </div>
+
+
+
+            <div class="col-12 col-lg-12" id="two-first-post">
+                {% for post in posts|slice(0,2)|raw %}
+                <!-- Item -->
+                <div class="news-item mt-2 mb-5">
+                    {% if post.featured_images.count %} {% for image in
+                    post.featured_images|slice(0,1)|raw %}
+                    <div
+                        class="news-image"
+                        style="
+                                background-image: url('{{ image.path }}');
+                                min-width: 100%;
+                            "
+                    ></div>
+                    {% endfor %} {% endif %}
+                    <div class="news-summary">
+                        <a
+                            href="{{ post.url }}"
+                            style="cursor: pointer; text-decoration: none;"
+                        >
+                            <h3 class="title" style="color: var(--blue);">
+                                {{ post.title }}
+                            </h3>
+                        </a>
+                        <span class="news-summary-content"
+                            >{{ str_limit(html_strip(post.summary)|raw, 170)
+                            }}</span
+                        >
+                    </div>
+                </div>
+                <!-- /Item -->
+
+                {% endfor %}
+            </div>
+            <!-- event list -->
+            
+            <div class="row col-12 p-0 m-0" id="post-list">
+                {% for post in posts|slice(2,4)|raw %}
+                <!-- Item -->
+                <div class="news-item mt-2">
+                    {% if post.featured_images.count %} {% for image in
+                    post.featured_images|slice(0,1)|raw %}
+                    <div
+                        class="news-image"
+                        style="
+                                background-image: url('{{ image.path }}');
+                                min-width: 100%;
+                            "
+                    ></div>
+                    {% endfor %} {% endif %}
+                    <div class="news-summary">
+                        <a
+                            href="{{ post.url }}"
+                            style="cursor: pointer; text-decoration: none;"
+                        >
+                            <h3 class="title" style="color: var(--blue);">
+                                {{ post.title }}
+                            </h3>
+                        </a>
+                        <span class="news-summary-content"
+                            >{{ str_limit(html_strip(post.summary)|raw, 170)
+                            }}</span
+                        >
+                    </div>
+                </div>
+                <!-- /Item -->
+                {% endfor %}
+            </div>
+            <div class="row col-12 p-0 m-0" id="post-list-after-load-more">
+                {% for post in posts|slice(6,200)|raw %}
+                <!-- Item -->
+                <div class="news-item mt-2">
+                    {% if post.featured_images.count %} {% for image in
+                    post.featured_images|slice(0,1)|raw %}
+                    <div
+                        class="news-image"
+                        style="
+                                background-image: url('{{ image.path }}');
+                                min-width: 100%;
+                            "
+                    ></div>
+                    {% endfor %} {% endif %}
+                    <div class="news-summary">
+                        <a
+                            href="{{ post.url }}"
+                            style="cursor: pointer; text-decoration: none;"
+                        >
+                            <h3 class="title" style="color: var(--blue);">
+                                {{ post.title }}
+                            </h3>
+                        </a>
+                        <span class="news-summary-content"
+                            >{{ str_limit(html_strip(post.summary)|raw, 170)
+                            }}</span
+                        >
+                    </div>
+                </div>
+                <!-- /Item -->
+                {% endfor %}
+            </div>
+        </div>
+        <!-- News -->
+        {% if posts.count > 6 %}
+        <div id="btn-load-more-div">
+            <div class="d-flex justify-content-center p-5">
+                <div
+                    id="btn-load-more"
+                    class="circular-btn"
+                    onclick="loadMorePost()"
+                >
+                    {{"LOAD MORE"|_}}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,111 @@
+[contactForm ctf]
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>LIN - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}" />
+        <meta name="title" content="{{ this.page.meta_title }}" />
+        <meta name="author" content="OctoberCMS" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="OctoberCMS" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="{{ '/global/logo.png'|media }}"
+        />
+        <!-- <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet" /> -->
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet" />
+        {% styles %}
+        <link
+            rel="stylesheet"
+            href="{{ 'assets/css/bootstrap/css/bootstrap.min.css'|theme }}"
+        />
+        <script src="https://kit.fontawesome.com/3f195b6264.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <!-- <script src="{{ 'assets/javascript/app.js'|theme }}"></script> -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+        <!-- <script src="{{ 'assets/css/bootstrap/js/bootstrap.min.js'|theme }}"></script> -->
+        {% framework extras %} {% scripts %}
+        <script>
+            function toggleMenu() {
+                var element = document.getElementById("menu-top");
+                element.classList.toggle("active");
+                var btn = document.getElementById("btn-menu");
+                btn.classList.toggle("active");
+            }
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+            function loadMorePost() {
+                document.getElementById("post-list-after-load-more").style.display = "grid";
+                document.getElementById("btn-load-more-div").style.display = "none";
+            }
+            function changeLang(){
+                String.prototype.replaceAt=function(index, replacement) {
+                    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+                }
+                lang = window.location.pathname;
+                if(lang.includes("/vn")){
+                    href = lang.replace('/vn', "/en");
+                    location.replace(window.location.origin + href);
+                }else{
+                    if(lang.includes("/en")){
+                    href = lang.replace('/en', "/vn");
+                    location.replace(window.location.origin + href);
+                }else{
+                    location.replace(window.location.origin + '/vn'+ lang);
+                }
+                }
+            }
+            $( document ).ready(function() {
+                $('#upcomming-evt li').first().addClass( "selected-event" );
+                var images = $('#images').find('div');
+                images.not(images.first()).hide();
+                $('#upcomming-evt li').click(function(){
+                    var $this = $(this),
+                    $this_val = $this.val();
+                    console.log($this_val);
+                    images.hide();
+                    $("#img"+$this_val).show();
+                    $("#upcomming-evt li").removeClass("selected-event");
+                    $(this).closest('li').addClass('selected-event');
+                    $('#upcomming-evt').val($(this).data('value'));
+                })
+            });
+        </script>
+    </body>
+</html>

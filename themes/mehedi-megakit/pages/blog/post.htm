@@ -1,0 +1,29 @@
+;;
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "blog-singlepost-layout"
+description = "Viewing a single blog post"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+{##}
+<section class="section blog-wrap bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% partial 'blog/blogPost' %}
+            </div>
+            <div class="col-md-4">
+                {% partial 'blog/categories' %}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,6 @@
+plugin:
+    name: 'vektar.ourteam::lang.plugin.name'
+    description: 'vektar.ourteam::lang.plugin.description'
+    author: Vektar
+    icon: oc-icon-users
+    homepage: ''

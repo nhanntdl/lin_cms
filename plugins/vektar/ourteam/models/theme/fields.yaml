@@ -1,0 +1,24 @@
+fields:
+    name:
+        label: 'vektar.ourteam::lang.models.theme.name'
+        type: text
+        hidden: true
+    name_colour:
+        label: 'vektar.ourteam::lang.models.theme.name_colour'
+        span: full
+        type: colorpicker
+    job_colour:
+        label: 'vektar.ourteam::lang.models.theme.job_colour'
+        span: full
+        type: colorpicker
+        tab: Theme
+    social_colour:
+        label: 'vektar.ourteam::lang.models.theme.social_colour'
+        span: full
+        type: colorpicker
+        tab: Theme
+    overlay_colour:
+        label: 'vektar.ourteam::lang.models.theme.overlay_colour'
+        span: full
+        type: colorpicker
+        tab: Theme

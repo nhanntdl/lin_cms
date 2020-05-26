@@ -1,0 +1,123 @@
+{% set events = __SELF__.events %}
+<div class="justify-content-center" id="event-container">
+  <div class="d-flex" id="events">
+    <div
+      class="col-12 col-lg-6 event-back"
+      style="max-height: 500px; min-height: 500px; padding: 0%; width: 100%; overflow-y: hidden;"
+    >
+    <div id="images">
+        {% for event in events %}
+        <div
+          id="img{{ loop.index }}"
+          class="event-img"
+          style="background-image: url('{{ event.description|replace({'![](': '', ')': ''}) }}');"
+        ></div>
+      {% endfor %}
+    </div>
+    </div>
+
+    <div
+      id="list-example"
+      class="col-12 col-lg-6 d-flex"
+      data-spy="scroll"
+      data-target="scrollText"
+      data-offset="10"
+      style="
+        max-height: 500px; min-height: 500px;
+        overflow-y: scroll;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        width: 100%;
+        background-color: #ebebeb;
+      "
+    >
+      <nav>
+        <ul class="nav nav-pills flex-column" style="width: 100%;" id="upcomming-evt">
+          {% for event in events %}
+          <li
+          id="{{ loop.index }}"
+          value="{{ loop.index }}"
+          class="list-group-item-action rounded-0 px-3 pl-4 d-flex flex-column justify-content-start justify-content-lg-center event-item"
+          style="cursor: pointer;"
+          >
+              <a
+                  href="{{ event.slug }}"
+                  class="text-center d-flex align-items-center"
+              >
+
+                  <div
+                      class="text-center d-flex align-items-start align-items-lg-center"
+                  >
+                      <div class="d-flex pl-0">
+                          <a
+                              class="d-flex flex-column align-items-center justify-content-center"
+                              ><span
+                                class="event-date"
+                                  style="
+                                      font-size: 45px;
+                                      line-height: 1;
+                                  "
+                                  >{{event.time_begin | date('d') }}</span
+                              >
+                              <span
+                                class="evnent-month"
+                                  style="
+                                      font-size: 25px;
+                                      line-height: 1;
+                                      text-transform: uppercase;
+                                  "
+                                  >{{event.time_begin | date('M') }}</span
+                              >
+                          </a>
+                      </div>
+                      <div
+                          class="h-100 p-0 d-flex align-items-start flex-column pt-1 pl-4 pl-lg-2 justify-content-start"
+
+                      >
+                          <a
+                              href="{{ event.slug }}"
+                              class="d-flex item-title"
+                              style="
+                                  text-align: left;
+                                  line-height: 1;
+                                  font-family: 'Livvic',
+                                      sans-serif !important;
+                                      font-size: 25px;
+                              "
+                              >{{event.name}}</a
+                          >
+                          <div
+                              class="d-flex date-event flex-column flex-lg-row text-left"
+                          >
+                            <div>
+                              <i class="dot"></i>
+                              <span
+                              class=""
+                                  style="
+                                      font-size: 22px;
+                                      padding-right: 10px;
+                                  "
+                              >
+                                  {{ event.time_begin | date('H:i')}}-{{ event.time_end | date('H:i')}}</span
+                              >
+                            </div>
+                            <div>
+                              <i class="dot ml-0 ml-lg-2"></i>
+                              <span style="font-size: 22px;">
+                                  {{ event.location_street }}
+                              </span>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </li>
+      {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

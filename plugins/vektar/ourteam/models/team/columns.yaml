@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'vektar.ourteam::lang.columns.team.name'
+        type: text
+        searchable: true
+        sortable: true

@@ -1,0 +1,10 @@
+name: Theme
+form: $/vektar/ourteam/models/theme/fields.yaml
+modelClass: Vektar\OurTeam\Models\Theme
+defaultRedirect: vektar/ourteam/themes
+create:
+    redirect: 'vektar/ourteam/themes/update/:id'
+    redirectClose: vektar/ourteam/themes
+update:
+    redirect: vektar/ourteam/themes
+    redirectClose: vektar/ourteam/themes

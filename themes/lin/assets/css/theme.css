@@ -1,0 +1,705 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Darker Grotesque:300,400,500,600,700,800,900|Livvic:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,900,900i&display=swap&subset=vietnamese");
+* {
+    font-family: "Darker Grotesque", sans-serif;
+    font-weight: 500;
+    outline: none;
+    text-decoration: none;
+    --black: #121212;
+    --blue: #0055ac;
+    --green: #00b373;
+    --white: #ffffff;
+    scroll-behavior: smooth !important;
+    font-size: 25px;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+.title {
+    font-family: "Livvic", sans-serif !important;
+    font-weight: 600;
+}
+
+.rectangle-btn {
+    color: white;
+    text-align: center;
+    background-color: var(--green);
+    border: 2px solid var(--green);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 600;
+}
+.rectangle-btn:hover {
+    color: var(--green);
+    background-color: transparent;
+    border: 2px solid var(--green);
+}
+
+.new-btn {
+    color: black;
+    text-align: center;
+    background-color: #ebebeb;
+    border: 2px solid #ebebeb;
+    cursor: pointer;
+    width: 100%;
+}
+.new-btn:hover {
+    color: #ffffff;
+    background-color: #00b373;
+    border: 2px solid #00b373;
+}
+#sub-menu .menu-item {
+    margin: 0 !important;
+}
+.menu-item.home {
+    display: none;
+}
+.event-date {
+    margin-top: -5px !important;
+}
+
+@media only screen and (max-width: 1220px) {
+    .event-item {
+        flex-direction: column !important;
+    }
+    #banner-donate-btn a span {
+        line-height: 20px !important;
+    }
+
+    #page-title {
+        text-align: left !important;
+        font-size: 250% !important;
+    }
+    #banner-donate-btn span {
+        font-size: 25px !important;
+    }
+    .cola {
+        text-align: center;
+        align-items: center;
+    }
+    #banner-donate-btn img {
+        height: 17px !important;
+    }
+    * {
+        font-size: 15px;
+    }
+    #sub-menu {
+        position: relative !important;
+    }
+    .menu-item.home {
+        display: block;
+    }
+    .menu-item.sub {
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .menu-item.sub a {
+        font-size: 30px;
+        padding-left: 30px !important;
+    }
+    #sub-menu.menu-item {
+        padding: 0 !important;
+    }
+}
+.circular-btn {
+    background-color: var(--green);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.3s;
+    border: 2px solid var(--green);
+}
+.circular-btn:hover {
+    background-color: white;
+    color: var(--green);
+}
+header {
+    width: 100%;
+}
+.banner {
+    height: 1080px;
+}
+#page-banner {
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#page-title {
+    font-weight: 500;
+}
+
+.text-shadow {
+    text-shadow: 0 0rem 0.25rem rgba(0, 0, 0, 0.5) !important;
+}
+
+#menu {
+    z-index: 99999;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.menu-item {
+    white-space: nowrap;
+    color: var(--white);
+    text-decoration: none !important;
+    transition: 0.3s;
+    font-size: 25px;
+    margin: 1.25rem;
+}
+.menu-item:hover {
+    color: var(--green);
+}
+.menu-item.sub {
+    width: 100%;
+    background-color: var(--green);
+    border-bottom: 2px solid white;
+}
+.menu-item.sub:nth-last-child(1) {
+    width: 100%;
+    background-color: var(--green);
+    border-bottom: 1px solid transparent;
+}
+.menu-item.sub:nth-child(1) {
+    animation: down 0.2s;
+}
+.menu-item.sub:nth-child(2) {
+    animation: down 0.4s;
+}
+.menu-item.sub:nth-child(3) {
+    animation: down 0.6s;
+}
+.menu-item.sub:nth-child(4) {
+    animation: down 0.8s;
+}
+
+.container {
+    max-width: 88% !important;
+}
+
+@keyframes down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.menu-item.sub:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+#sub-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    margin: inherit;
+    margin-top: auto;
+}
+#logo-top {
+    height: 110px;
+}
+.menu-item:hover #sub-menu {
+    display: flex;
+}
+#homebannerimage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+#page-title {
+    font-size: 3rem;
+}
+#donate-lang {
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn-menu {
+    padding: 0.5rem;
+    padding-top: 0;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 99999;
+}
+#btn-menu .line {
+    background-color: var(--green);
+    height: 5px;
+    width: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#btn-menu {
+    display: none;
+}
+#menu-top.active {
+    display: block;
+    background-color: var(--blue);
+    width: 100vw !important;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#content-banner {
+    width: 60%;
+    text-align: left;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+#page-banner {
+    background-position: center;
+}
+#page-title {
+    color: white !important;
+}
+#chat-f-b {
+    background-color: var(--blue) !important;
+    border-bottom: 1px solid var(--blue) !important;
+}
+#fb_alert_num {
+    color: white !important;
+    background-color: var(--green) !important;
+}
+.msg_b {
+    background-color: #0099ff !important;
+    box-shadow: none !important;
+    color: white !important;
+}
+.msg_b:after {
+    border-color: transparent transparent transparent #0099ff !important;
+    right: -12px !important;
+}
+#fb_chat_start {
+    box-shadow: none !important;
+    background-color: white !important;
+}
+#fb_chat_start em {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+#chat_f_b_smal {
+    background-color: var(--blue) !important;
+    border-bottom: 1px solid var(--blue) !important;
+}
+.menu-item#lang {
+    display: none;
+}
+.donate-phone {
+    position: absolute;
+    width: 95px;
+    top: 0.35rem;
+    margin: 1rem;
+    right: 4rem;
+    height: 25px !important;
+    line-height: 50px !important;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    padding: 0 !important;
+    padding-top: -10px !important;
+    font-size: 25px !important;
+}
+.donate-phone span {
+    margin-top: -5px;
+    font-size: 25px !important;
+}
+#submit-wrapper-contactForm {
+    height: 61px;
+}
+@media only screen and (max-width: 768px) {
+    .menu-item {
+        font-size: small;
+        margin: 0 !important;
+    }
+    .menu-item:nth-child(1) {
+        padding-top: 4px;
+    }
+    #b-c-facebook {
+        display: none !important;
+    }
+    .menu-item#lang {
+        display: block;
+    }
+    /* #scf-form-id-contactForm .form-group #contactForm-Name {
+        display: none !important;
+    } */
+    #sizeIcon {
+        font-size: 20px !important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #end {
+        align-items: flex-end;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+    #text {
+        font-size: 31px;
+    }
+}
+@media only screen and (max-width: 1220px) {
+    .banner {
+        height: 100vh;
+    }
+    #menu {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    #logo-top {
+        height: 70px !important;
+    }
+}
+@media only screen and (max-width: 1220px) {
+    .menu-item:hover #sub-menu,
+    .menu-item:active #sub-menu,
+    .menu-item:focus #sub-menu {
+        display: flex;
+    }
+    #menu-top {
+        display: none;
+    }
+    #btn-menu {
+        display: block;
+    }
+    #donate-lang {
+        display: none;
+    }
+    .donate-phone {
+        display: flex !important;
+    }
+    #menu-top {
+        padding: 0;
+        padding-left: 30px;
+        max-width: 100vw !important;
+    }
+    #menu-top ul {
+        flex-direction: column;
+        text-align: left;
+    }
+    #menu-top ul li {
+        margin-right: 0;
+    }
+    .menu-item {
+        font-size: 45px;
+        font-weight: 500 !important;
+    }
+    #page-title {
+        width: 100%;
+    }
+    #content-banner {
+        width: 100%;
+        text-align: left;
+    }
+    #banner-donate-btn {
+        justify-content: left;
+    }
+
+    #sub-menu {
+        top: 0;
+        right: 0;
+    }
+}
+#lang {
+    color: var(--white);
+}
+.small-contact {
+    background-color: brown !important;
+}
+
+#submit-wrapper-contactForm {
+    text-align: left !important;
+}
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+@media only screen and (min-width: 992) {
+    #titleLearnmore {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    #titleLearnmore {
+        font-size: 20px;
+    }
+}
+
+/* ---form submit footer--- */
+form#scf-form-id-ctf {
+    width: 50%;
+}
+#scf-form-id-ctf {
+    display: flex !important;
+    flex-direction: column !important;
+}
+#ctf-name {
+    display: none !important;
+}
+
+#scf-form-id-ctf #submit-wrapper-ctf button {
+    font-size: 25px !important;
+    padding: 4px !important;
+    background-color: var(--blue) !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    border: 2px solid var(--green) !important ;
+    border-radius: 0 !important;
+    margin: auto !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+#scf-form-id-ctf .form-control {
+    font-size: 20px !important;
+    padding: 2px !important;
+    background-color: var(--blue) !important;
+    box-sizing: border-box !important;
+    margin: auto !important;
+    color: white !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+}
+
+/* ---/form submit footer--- */
+
+#scf-message-ctf {
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+#scf-message-ctf .alert.alert-success {
+    padding: 5px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    color: white !important;
+    background-color: var(--green) !important;
+}
+
+.alert.alert-success {
+    border-radius: 0 !important;
+    border: none !important;
+    color: white !important;
+    background-color: var(--green) !important;
+}
+/* #btn-menu .line{
+    transition: .3s;
+} */
+#btn-menu.active .line {
+    background-color: #ffffff;
+}
+#btn-menu.active .line:nth-child(2) {
+    display: none;
+}
+#btn-menu.active .line:nth-child(1) {
+    transform: rotate(225deg);
+    margin-top: 15px;
+}
+
+#btn-menu.active .line:nth-child(3) {
+    transform: rotate(315deg);
+    margin-top: -10px;
+}
+
+/* footer */
+#bold {
+    font-weight: bold;
+}
+footer {
+    background-color: var(--blue);
+}
+footer .container {
+    padding-top: 20vh;
+}
+
+#arrowTop {
+    height: 90px;
+    width: 45px;
+    width: 50px;
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+}
+#logoSmall {
+    height: 110px;
+}
+#logoBig {
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+@media only screen and (max-width: 560px) {
+    #logoBig {
+        display: none;
+    }
+    span {
+        font-size: 20px;
+    }
+    #flexColumn {
+        display: flex;
+        flex-direction: column;
+    }
+    #box1 {
+        max-width: 100%;
+    }
+    #box2 {
+        max-width: 100%;
+        justify-content: start !important;
+        padding-left: 0 !important;
+        margin-top: 10px;
+    }
+    #box3 {
+        max-width: 100%;
+        justify-content: start !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #privacy {
+        display: block !important;
+        font-size: 15px !important;
+    }
+    #privacy a {
+        font-size: 15px !important;
+    }
+    #privacy1 {
+        display: none;
+    }
+    footer .container {
+        padding-top: 10vh;
+    }
+
+    #distanceIcon {
+        margin-top: 50px !important;
+    }
+}
+@media only screen and (max-width: 560px) and (min-width: 472px) {
+    #arrowTop {
+        right: 20px;
+        bottom: 90px;
+        height: 40px;
+        width: 20px;
+    }
+}
+@media only screen and (max-width: 471px) {
+    #arrowTop {
+        right: 20px;
+        bottom: 115px;
+        height: 40px;
+        width: 20px;
+    }
+}
+@media only screen and (max-width: 991px) and (min-width: 561px) {
+    #logoBig {
+        width: 40%;
+    }
+    #logoSmall {
+        height: 90px;
+    }
+    form#scf-form-id-ctf {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 1300px) and (min-width: 992px) {
+    #logoBig {
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 1220px) and (min-width: 769px) {
+    #arrowTop {
+        right: 10px;
+        bottom: 30px;
+        height: 60px;
+        width: 30px;
+    }
+    .menu-item#lang {
+        display: block;
+    }
+    #aMenu {
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 561px) {
+    #arrowTop {
+        right: 10px;
+        bottom: 30px;
+        height: 40px;
+        width: 20px;
+    }
+}
+/* / footer */
+
+/* messenger */
+#iconMess {
+    width: 30px;
+    height: 30px;
+    background-image: url("../get_involved/vectorNarrow.png");
+
+    /* background-image: url("../get_involved/vectorNarrow.png"); */
+    background-size: cover;
+    background-position: center center;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+}
+#hiMess {
+    margin-left: 10px;
+    width: 70%;
+    border-radius: 30px;
+    background-color: #cccfd2;
+    font-size: 18px;
+    color: black;
+    padding: 5px;
+}
+#contunieMess {
+    width: 80%;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: white;
+    font-size: 18px;
+}
+#notYou {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1365px) and (min-width: 1221px) {
+    #aMenu {
+        margin: 10px;
+    }
+}

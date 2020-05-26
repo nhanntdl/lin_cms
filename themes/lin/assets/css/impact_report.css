@@ -1,0 +1,72 @@
+.container .content {
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+}
+.circular-btn {
+    font-size: xx-large;
+    font-weight: 600;
+}
+.circular-btn.blue {
+    font-size: unset;
+    background-color: var(--blue);
+    border-color: var(--blue);
+    font-weight: 600;
+}
+.circular-btn.blue:hover {
+    color: var(--blue);
+    background-color: transparent;
+}
+
+.ourimpact-content {
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 60%;
+}
+.back {
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.dot-div {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+@media only screen and (max-width: 991px) {
+    .container .content {
+        padding: 15px;
+    }
+    .back {
+        display: none;
+    }
+    #titleReport{
+        font-size: 70px !important;
+    }
+    
+}
+@media only screen and (max-width:991px) and (min-width:501px){
+    .circular-btn{
+        height: 150px !important;
+        width: 150px !important;
+    }
+    .circular-btn.blue{
+        font-size: 30px;
+    }
+    .dot-div {     
+        grid-template-columns: 2fr 2fr;      
+    }
+}
+
+@media only screen and (max-width:1167px) and (min-width:992px){
+    .dot-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px !important;
+    }
+    #titleReport{
+        font-size: 50px !important;
+    }
+}

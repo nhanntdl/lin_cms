@@ -1,0 +1,10 @@
+name: Employees
+form: $/vektar/ourteam/models/employee/fields.yaml
+modelClass: Vektar\OurTeam\Models\Employee
+defaultRedirect: vektar/ourteam/employees
+create:
+    redirect: 'vektar/ourteam/employees/update/:id'
+    redirectClose: vektar/ourteam/employees
+update:
+    redirect: vektar/ourteam/employees
+    redirectClose: vektar/ourteam/employees

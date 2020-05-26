@@ -1,0 +1,22 @@
+;;
+description = "CMS Layout"
+==
+{##}
+<!doctype html>
+<html lang="en">
+<head>
+{% partial 'site/meta.htm' %}
+</head>
+
+<body>
+{# Header with TopBar #}
+{% partial 'site/header.htm' %}
+<div class="main-wrapper">{# Main Wrapper #}
+{% page %}
+{% partial 'site/footer.htm' %}
+</div>{# End Main Wrapper #}
+
+{# JavaScripts #}
+{% partial 'site/scripts.htm' %}
+</body>
+</html>

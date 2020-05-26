@@ -1,0 +1,32 @@
+.img-des {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    min-width: 50px;
+}
+#recent-news {
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+#post-content h1,
+#post-content h2,
+#post-content h3,
+#post-content h4,
+#post-content h5,
+#post-content h6 {
+    font-family: "Livvic", sans-serif !important;
+    color: var(--green);
+    font-weight: 600;
+}
+#post-content img{
+  max-width: 100%;
+}
+.recent-img {
+    width: 100%;
+    padding-top: 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #ebebeb;
+}

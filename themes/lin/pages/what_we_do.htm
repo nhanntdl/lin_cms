@@ -1,0 +1,135 @@
+title = "What we do"
+url = "/what-we-do"
+layout = "default"
+is_hidden = 0
+==
+<header
+    id="page-banner"
+    style="background-image: url('{{ '/header/what_we_do_header.png'|media }}');"
+>
+    <div class="banner" style="height: 70vh;">
+        <div
+            class="container d-flex justify-content-center align-items-center flex-column"
+            style="height: 100%; position: relative;"
+        >
+            <section
+                style="
+                    position: absolute;
+                    left: 0;
+                    bottom: 3rem;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    color: var(--white);
+                "
+                id="content-banner"
+            >
+                <h1 class="title" id="page-title">{{"What we do"|_}}</h1>
+                <div class="d-flex" id="banner-donate-btn"></div>
+            </section>
+        </div>
+    </div>
+</header>
+<link rel="stylesheet" href="{{ 'assets/css/what_we_do.css'|theme }}" />
+<div id="what-we-do">
+    <div class="container">
+        <div class="pt-5 pb-5">
+            <h2 class="title" style="font-weight: 400;">
+                {{"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas porttitor, erat at tincidudnt porttitor, ligula risus
+                pharetra metus, nec tincidunt mi nisl eu arcu."|_}}
+            </h2>
+        </div>
+        <div
+            class="flex-column flex-lg-row d-flex justify-content-center"
+            style="text-align: center; margin-bottom: 90px;"
+        >
+            <div class="col-12 col-lg-4 pr-5 pl-5 mb-3 justify-content-center" id="distance">
+                <div class="d-flex justify-content-center">
+                    <div
+                        class="col-12 circle"
+                        style="background-image: url('{{ '/what_we_do/Layer 967.png'|media }}');"
+                    ></div>
+                </div>
+                <div class="col-12 d-flex align-items-center flex-column">
+                    <p class="uppercase">{{" Information Sharing"|_}}</p>
+                    <span style="font-size: 18px;"
+                        >{{"Maecenas viverra mattis sem quis euismod. Aliquam id
+                        lacinia sem. Ut eu dapibus nibh. Praesent erat velit,
+                        cursus eget pharetra vitae, pulvinar sed eros. Nullam at
+                        neque sollicitudin, finibus neque a, semper
+                        massa."|_}}</span
+                    >
+                    <br />
+                    <button
+                        class="col-8 col-lg-8 col-md-6 col-sm-12 rectangle-btn mt-4"
+                       
+                        onclick="window.location='information-sharing'"
+                        style="font-size: 18px; white-space: nowrap;"
+                    >
+                        {{"LEARN MORE"|_}}
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 pr-5 pl-5 mb-3" id="distance">
+                <div
+                    class="flex-column flex-lg-row d-flex justify-content-center"
+                >
+                    <div
+                        class="col-12 circle"
+                        style="background-image: url('{{ '/what_we_do/Layer 1021.png'|media }}');"
+                    ></div>
+                </div>
+                <div class="col-12 d-flex align-items-center flex-column">
+                    <p class="uppercase">{{" Capacity Building"|_}}</p>
+                    <span style="font-size: 18px;"
+                        >{{"Maecenas viverra mattis sem quis euismod. Aliquam id
+                        lacinia sem. Ut eu dapibus nibh. Praesent erat velit,
+                        cursus eget pharetra vitae, pulvinar sed eros. Nullam at
+                        neque sollicitudin, finibus neque a, semper
+                        massa."|_}}</span
+                    >
+                    <br />
+                    <button
+                        class="col-8 col-lg-8 col col-md-6 col-sm-12 rectangle-btn mt-4"
+                      
+                        onclick="window.location='capacity-building'"
+                        style="font-size: 18px; white-space: nowrap;"
+                    >
+                        {{"LEARN MORE"|_}}
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 pr-5 pl-5 mb-3" id="distance">
+                <div
+                    class="flex-column flex-lg-row d-flex justify-content-center"
+                >
+                    <div
+                        class="col-12 circle"
+                        style="background-image: url('{{ '/what_we_do/Layer 1022.png'|media }}');"
+                    ></div>
+                </div>
+                <div class="col-12 d-flex align-items-center flex-column">
+                    <p class="uppercase">{{"Resource Mobilization"|_}}</p>
+                    <span style="font-size: 18px;"
+                        >{{"Maecenas viverra mattis sem quis euismod. Aliquam id
+                        lacinia sem. Ut eu dapibus nibh. Praesent erat velit,
+                        cursus eget pharetra vitae, pulvinar sed eros. Nullam at
+                        neque sollicitudin, finibus neque a, semper
+                        massa."|_}}</span
+                    >
+                    <br />
+                    <button
+                        class="col-8 col-lg-8 col-md-6 col-sm-12 rectangle-btn mt-4"
+                        
+                        onclick="window.location='resource-mobilization'"
+                        style="font-size: 18px; white-space: nowrap;"
+                    >
+                        {{"LEARN MORE"|_}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

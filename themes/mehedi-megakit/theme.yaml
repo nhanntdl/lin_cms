@@ -1,0 +1,9 @@
+name: "MegaKit"
+description: "A multipurpose theme based on Bootstrap 4. Ported to OctoberCMS , designed and developed by themefisher"
+author: Themefisher
+homepage: "https://themefisher.com"
+code: megakit
+form: config/fields.yaml
+require:
+    - RainLab.Blog
+    - Martin.Forms

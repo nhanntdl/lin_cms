@@ -1,0 +1,10 @@
+columns:
+    name:
+        label: 'vektar.ourteam::lang.columns.employee.name'
+        type: text
+        searchable: true
+        sortable: true
+    employeephoto:
+        label: 'vektar.ourteam::lang.columns.employee.image'
+        type: partial
+        path: ~/plugins/vektar/ourteam/models/employee/partials/_preview.htm
